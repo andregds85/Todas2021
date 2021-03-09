@@ -46,6 +46,7 @@ return array(
     'App\\Models\\administrador' => $baseDir . '/app/Models/administrador.php',
     'App\\Models\\buscaCategoria' => $baseDir . '/app/Models/buscaCategoria.php',
     'App\\Models\\categoriaMapas' => $baseDir . '/app/Models/categoriaMapas.php',
+    'App\\Models\\macro' => $baseDir . '/app/Models/macro.php',
     'App\\Models\\mapas' => $baseDir . '/app/Models/mapas.php',
     'App\\Models\\soudohospital' => $baseDir . '/app/Models/soudohospital.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',

@@ -10,6 +10,11 @@ use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\HospitalController;
 use App\Http\Controllers\soudohospital;
 use App\Http\Controllers\MapasController;
+use App\Http\Controllers\MacroController;
+
+
+
+
 
 
 Route::get('/', function () {
@@ -27,12 +32,11 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
     Route::resource('categorias', CategoriaController::class);
+    Route::resource('macros', MacroController::class);
     Route::resource('pacientes', PacienteController::class);
     Route::resource('hospital', HospitalController::class);
     Route::resource('soudohospital', soudohospital::class);
     Route::resource('mapas', MapasController::class);
-
-
 
     Route::get('import_exportpacie', 'App\Http\Controllers\Import_Export_ControllerPacie@importExport');
     Route::post('importpacie', 'App\Http\Controllers\Import_Export_ControllerPacie@import');
@@ -41,6 +45,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('import_export', 'App\Http\Controllers\Import_Export_Controller@importExport');
     Route::post('import', 'App\Http\Controllers\Import_Export_Controller@import');
     Route::get('export', 'App\Http\Controllers\Import_Export_Controller@export');
+
 });
 
 

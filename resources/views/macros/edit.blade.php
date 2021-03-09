@@ -1,14 +1,12 @@
-@extends('layouts3.app')
-
-
+@extends('layouts4.app')
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Editar paciente</h2>
+                <h2>Editar Macro</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('pacientes.index') }}"> Voltar</a>
+                <a class="btn btn-primary" href="{{ route('macro.index') }}"> Voltar</a>
             </div>
         </div>
     </div>
@@ -26,27 +24,21 @@
     @endif
 
 
-    <form action="{{ route('macros.update',$macro->id) }}" method="POST">
+    <form action="{{ route('macro.update',$macro->id) }}" method="POST">
     	@csrf
         @method('PUT')
 
-                 
-            <div class="row">  
-             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-		            <strong>Nome</strong>
-		            <input type="text" name="nome" value="{{ $macro->nome }}" class="form-control" placeholder="Nome do Usuário">
+         <div class="row">
+		    <div class="col-xs-12 col-sm-12 col-md-12">
+		        <div class="form-group">
+		            <strong>Nome:</strong>
+		            <input type="text" name="nome" value="{{ $macro->nome }}" class="form-control" placeholder="Nome">
 		        </div>
 		    </div>
-            </div>
-
-    
 		    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
 		      <button type="submit" class="btn btn-primary">Atualizar</button>
 		    </div>
 		</div>
-
-
     </form>
 
 

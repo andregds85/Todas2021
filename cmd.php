@@ -18,6 +18,7 @@ Criar uma Model e Migrations
 php artisan make:model nome da Model -m
 
 
+
 Criar um Controller 
 php artisan make:controller PostController --resource
 
@@ -38,6 +39,9 @@ Exportar CSV e EXCEL
 
 
 
+
+
+
 Mapas dos Layouts
 
 Layouts         Principal
@@ -47,10 +51,6 @@ Layouts2        Sou do Hospital
 Layouts 3       Regulação 
 
 Layouts 4       Administrador 
-
-
-
-
 
 
 php artisan make:model administrador -m       --
