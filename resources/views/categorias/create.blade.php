@@ -44,6 +44,28 @@
                 </div>
 
 
+    <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+                <label for="exampleInputCategoria">Hospital</label>
+                <select class="form-control" name="macro" id="categoria">
+
+                <?php
+                    use App\Models\macro;
+                    $tabela = macro::all();
+                ?>
+
+                @foreach($tabela as $item)
+
+                <option value='{{$item->id}}' >{{$item->id}}{{$item->nome}}</option>
+                @endforeach
+
+                </select>
+            </div>
+        </div>
+</div>
+
+
             </div>
 
 
@@ -63,3 +85,7 @@
 
 <p class="text-center text-primary"><small>Laravel</small></p>
 @endsection
+
+
+
+

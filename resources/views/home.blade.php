@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('Laravel') }}
+                    {{ __('Dashboard Dashboard') }}
                 </div>
                 
             </div>

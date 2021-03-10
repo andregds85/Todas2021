@@ -13,6 +13,7 @@ class CreateCategoriasTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('cnes');
+            $table->text('macro');
             $table->timestamps();
         });
     }

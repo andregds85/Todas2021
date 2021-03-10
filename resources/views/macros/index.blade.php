@@ -15,7 +15,6 @@
         </div>
     </div>
 
-
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
@@ -28,29 +27,12 @@
         <tr>
             <th>id</th>
             <th>nome</th>
-            <th width="280px">Ação</th>
         </tr>
 	    @foreach ($macros as $macro)
 	    <tr>
-
-            <td>{{ $macro->id }}</td>
-            <td>{{ $macro->nome }}</td>
-          
-	        <td>
-            <form action="{{ route('macros.destroy',$macro->id) }}" method="POST">
-                    <a class="btn btn-info" href="{{ route('macros.edit',$macro->id) }}">Editar</a>
-                    @can('macros-edit')
-                    <a class="btn btn-primary" href="{{ route('macros.edit',$macro->id) }}">Editar</a>
-                    @endcan
-
-                    @csrf
-                    @method('DELETE')
-                    @can('macros-delete')
-                    <button type="submit" class="btn btn-danger">Apagar</button>
-                    @endcan
-                </form>
-	        </td>
-	    </tr>
+           <td>{{ $macro->id }}</td>
+           <td>{{ $macro->nome }}</td>
+        </tr>
 	    @endforeach
     </table>
 

@@ -18,7 +18,6 @@ Criar uma Model e Migrations
 php artisan make:model nome da Model -m
 
 
-
 Criar um Controller 
 php artisan make:controller PostController --resource
 
