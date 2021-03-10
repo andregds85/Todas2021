@@ -12,11 +12,6 @@ use App\Http\Controllers\soudohospital;
 use App\Http\Controllers\MapasController;
 use App\Http\Controllers\MacroController;
 
-
-
-
-
-
 Route::get('/', function () {
     return view('home');
 });
@@ -24,7 +19,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
 
 Route::group(['middleware' => ['auth']], function() {
 

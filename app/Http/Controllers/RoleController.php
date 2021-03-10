@@ -11,18 +11,14 @@ use DB;
     
 class RoleController extends Controller
 {
- 
-    function __construct()
+     function __construct()
     {
          $this->middleware('permission:role-list|role-create|role-edit|role-delete', ['only' => ['index','store']]);
          $this->middleware('permission:role-create', ['only' => ['create','store']]);
          $this->middleware('permission:role-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:role-delete', ['only' => ['destroy']]);
     }
-    
-
-    
-
+       
     public function index(Request $request)
     {
         $roles = Role::orderBy('id','DESC')->paginate(5);
@@ -36,8 +32,7 @@ class RoleController extends Controller
         $permission = Permission::get();
         return view('roles.create',compact('permission'));
     }
-    
-
+   
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -85,7 +80,6 @@ class RoleController extends Controller
         $role = Role::find($id);
         $role->name = $request->input('name');
         $role->save();
-    
         $role->syncPermissions($request->input('permission'));
     
         return redirect()->route('roles.index')

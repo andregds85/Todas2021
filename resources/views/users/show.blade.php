@@ -27,6 +27,21 @@
             {{ $user->email }}
         </div>
     </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Hospital:</strong>
+            {{ $user->categorias_id 
+                     }}
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Macro:</strong>
+            {{ $user->macro }}
+        </div>
+    </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>Grupos:</strong>
@@ -39,3 +54,4 @@
     </div>
 </div>
 @endsection
+

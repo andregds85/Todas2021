@@ -12,20 +12,20 @@
     </div>
 
 
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <strong>Ops!</strong> Houve algum erro na sua entrada<br><br>
+  @if ($errors->any())
+   <div class="alert alert-danger">
+        <strong>Ops!</strong> Houve algum erro na sua entrada<br><br>
             <ul>
                     @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
                      }  @endforeach
             </ul>
         </div>
-    @endif
+  @endif
 
 
-    <form action="{{ route('pacientes.store') }}" method="POST">
-    	@csrf
+<form action="{{ route('pacientes.store') }}" method="POST">
+@csrf
 
 <!-- chama  a tabela categorias dentro da tabela pacientes -->
 

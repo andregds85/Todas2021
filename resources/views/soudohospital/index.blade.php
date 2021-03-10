@@ -16,14 +16,13 @@
 
                     {{ __('Voce está Logodo no Sistema!') }}
 
-
                    <div><td>Id:</td><td> {{ Auth::user()->id}}</td> </div>
                    <div><td>Nome:</td><td> {{ Auth::user()->name}}</td> </div>
                    <div><td>Email:</td><td> {{ Auth::user()->email}}</td> </div>
                    <div><td>Hospital:</td><td> {{ Auth::user()->categorias_id}}</td> </div>
-
-
-                </div>
+                   <div><td>Macro:</td><td> {{ Auth::user()->macro}}</td> </div>
+               
+               </div>
             </div>
         </div>
     </div>
