@@ -1,6 +1,6 @@
 @extends('layouts3.app')
-
 @section('content')
+
 <div class="card mb-3">
   <div class="card-body">
     <h5 class="card-title">Importar Paciente</h5>
@@ -11,6 +11,11 @@
     </p>
   </div>
 </div>
+
+
+<div><td>Macro:</td><td> {{ Auth::user()->macro}}</td> </div>
+
+<?php $m=Auth::user()->macro; ?>
 
 <div class="card mb-3">
   <div class="card-body">
@@ -56,10 +61,10 @@
 
     <?php
     use App\Models\Categoria;
+    use App\Models\Pacientes;
+
     $tabela = categoria::all();
 ?>
-
-
     <table class="table table-bordered">
         <tr>
             <th>Status</th>
@@ -67,13 +72,16 @@
             <th>Hospital</th>
             <th width="280px">Ação</th>
         </tr>
-	    @foreach ($pacientes as $paciente)
+<?php
+$itensP = Pacientes::where('macro',$m)->get();
+?>
+
+	    @foreach ($itensP as $paciente)
 	    <tr>
 
             <td>{{ $paciente->statusSolicitacao }}</td>
             <td>{{ $paciente->solicitacao }}</td>
             <?php $a=$paciente->categorias_id; ?>
-
 
 
                 @foreach($tabela as $item)
@@ -87,7 +95,6 @@
                     echo "$c";
                     echo "</td>";
                 } ?>
-
 
                 @endforeach
 
@@ -109,7 +116,6 @@
 	    </tr>
 	    @endforeach
     </table>
-
 
 
 

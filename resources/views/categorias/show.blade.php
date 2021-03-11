@@ -27,6 +27,12 @@
                 {{ $categoria->cnes }}
             </div>
         </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Macro:</strong>
+                {{ $categoria->macro }}
+            </div>
+        </div>
     </div>
 @endsection
-<p class="text-center text-primary"><small>Laravel</small></p>

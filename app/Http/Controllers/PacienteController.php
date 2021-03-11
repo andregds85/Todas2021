@@ -19,6 +19,7 @@ class PacienteController extends Controller
  
     public function index()
     {
+
          $pacientes = Pacientes::orderby('id', 'asc')->paginate();
          return view('pacientes.index',compact('pacientes'));
     
@@ -40,6 +41,7 @@ class PacienteController extends Controller
     {
         request()->validate([
             'categorias_id' => 'required',
+            'macro' => 'required',
             'solicitacao' => 'required',
             'cns' => 'required',
             'nomedousuario' => 'required',
@@ -71,6 +73,7 @@ class PacienteController extends Controller
     {
          request()->validate([
             'categorias_id' => 'required',
+            'macro' => 'required',
             'solicitacao' => 'required',
             'cns' => 'required',
             'nomedousuario' => 'required',

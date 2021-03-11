@@ -1,9 +1,5 @@
 @extends('layouts3.app')
-
 @section('content')
-
-
-
 
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
@@ -17,6 +13,9 @@
 ?>
 
 
+<div><td>Macro:</td><td> {{Auth::user()->macro}}</td> </div>
+
+<?php $m=Auth::user()->macro; ?>
 
     <table class="table table-bordered">
         <tr>

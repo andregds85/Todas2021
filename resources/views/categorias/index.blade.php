@@ -59,5 +59,4 @@
         {!! $categorias->links() !!}
 
 
-<p class="text-center text-primary"><small>Laravel</small></p>
 @endsection

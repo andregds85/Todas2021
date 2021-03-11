@@ -6,16 +6,13 @@ use Illuminate\Support\Facades\Schema;
 
 class CreatePacientesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+   
     public function up()
     {
         Schema::create('pacientes', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('categorias_id');
+            $table->string('macro');
             $table->string('solicitacao');
             $table->string('cns');
             $table->string('nomedousuario');
@@ -38,11 +35,7 @@ class CreatePacientesTable extends Migration
 
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    
     public function down()
     {
         Schema::dropIfExists('pacientes');

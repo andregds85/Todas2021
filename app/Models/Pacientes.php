@@ -12,6 +12,7 @@ class Pacientes extends Model
     protected $table="pacientes";
     protected $fillable = [
         'categorias_id',
+        'macro',
         'solicitacao',
         'cns',
         'nomedousuario',

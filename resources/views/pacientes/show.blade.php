@@ -32,6 +32,18 @@
         <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Macro :</strong>
+                {{ $paciente->macro}}
+            </div>
+        </div>
+        </div>
+
+
+
+
+        <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
                 <strong>Criado em:</strong>
                 {{ $paciente->created_at}}
             </div>
