@@ -2,10 +2,10 @@
 @section('content')
 <div class="card mb-3">
   <div class="card-body">
-    <h5 class="card-title">Importar e Exportar Usuários</h5>
+    <h5 class="card-title">Exportar Usuários</h5>
 
     <p class="card-text">
-   <a class="nav-link" href="{{ url('import_export') }}">Importar e Exportar Usuários</a>
+   <a class="nav-link" href="{{ url('import_export') }}">Exportar Usuários</a>
 
     </p>
   </div>

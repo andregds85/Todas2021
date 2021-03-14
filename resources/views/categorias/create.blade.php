@@ -25,10 +25,8 @@
         </div>
     @endif
 
-
     <form action="{{ route('categorias.store') }}" method="POST">
     	@csrf
-
 
          <div class="row">
 		    <div class="col-xs-12 col-sm-12 col-md-12">
@@ -47,7 +45,7 @@
     <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-                <label for="exampleInputCategoria">Hospital</label>
+                <label for="exampleInputCategoria">Macro</label>
                 <select class="form-control" name="macro" id="categoria">
 
                 <?php
@@ -58,32 +56,20 @@
                 @foreach($tabela as $item)
 
                 <option value='{{$item->id}}' >{{$item->id}}{{$item->nome}}</option>
+
                 @endforeach
 
-                </select>
+            </select>
             </div>
         </div>
 </div>
-
-
             </div>
-
-
-
-
-
-
 
 		    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
 		            <button type="submit" class="btn btn-primary">Cadastrar</button>
 		    </div>
 		</div>
-
-
     </form>
-
-
-<p class="text-center text-primary"><small>Laravel</small></p>
 @endsection
 
 

@@ -18,17 +18,16 @@ class HospitalController extends Controller
          $this->middleware('permission:pacientes-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:pacientes-delete', ['only' => ['destroy']]);
     }
-  
+
     public function index()
     {
          $hospital = Hospital::orderby('id', 'asc')->paginate();
             return view('hospital.index',['itens' => $hospital]);
     }
 
-
     public function store(Request $request)
     {
-   
+
     }
 
     public function show($id){
@@ -38,34 +37,22 @@ class HospitalController extends Controller
 
     public function edit($id)
     {
-   
-   
+
     }
 
     public function update(Request $request, $id)
     {
     }
 
-
-
-   
     public function destroy($id)
     {
-   
+
     }
-
-
-
-
     public function id($id){
         return  $id;
     }
 
-    public function selectCliente() {
-        $results = Pacientes::select('select * from cliente where id = ?', [1]);
 
-        return response()->view('hospital.vizualiza',$results);
-    }
 
 
 
